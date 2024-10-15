@@ -1,0 +1,155 @@
+body {
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    place-content: center;
+    background: black;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-dialog {
+    --color-1: rgb(3, 60, 95);
+    --color-2: rgb(45, 159, 193);
+    --color-3: rgb(8, 42, 66);
+    width: 60vh;
+    height: 50vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    background: rgb(22, 64, 92);
+    background: radial-gradient(circle,
+            rgba(22, 64, 92, 1) 49%,
+            rgba(2, 0, 36, 1) 100%,
+            rgba(9, 9, 121, 1) 100%);
+    box-shadow: -10px -10px var(--color-1), 15px 10px var(--color-2);
+    transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+    border-radius: 50px;
+}
+
+.dialog-header {
+    position: relative;
+    padding-top: 3vh;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 6px;
+    font-size: 3vh;
+}
+
+.dialog-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.5vh;
+    padding: 0 10vh;
+    height: 30vh;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+
+.dialog-foot {
+    position: absolute;
+    bottom: 4.6vh;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.logo-out-btn {
+    font-size: 24px;
+    background: transparent;
+    color: #fefeff;
+    border: 3px solid #fefeff;
+    box-shadow: 1px 1px 50px #0f4072;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.login-btn {
+    font-size: 24px;
+    background: transparent;
+    color: #fefeff;
+    border: 3px solid #fefeff;
+    box-shadow: 1px 1px 50px #0f4072;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+@media screen and (max-aspect-ratio: 16/9) {
+    .z-b {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        z-index: 10;
+
+
+    }
+
+    .z-btn {
+        position: absolute;
+        width: 7vw;
+        height: 7vw;
+        left: 39.8vw;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    .m-btn {
+        position: absolute;
+        width: 7vw;
+        height: 7vw;
+        right: 37.5vw;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+    .z-b {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        z-index: 10;
+
+
+    }
+
+    .z-btn {
+        position: absolute;
+        width: 12vh;
+        height: 10vh;
+        left: 71.5vh;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    .m-btn {
+        position: absolute;
+        width: 12vh;
+        height: 10vh;
+        right: 66.5vh;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+}
